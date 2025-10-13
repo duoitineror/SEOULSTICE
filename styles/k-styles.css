@@ -1,0 +1,337 @@
+/*KSTYLES-AERO2*/
+
+/*selectors*/
+
+:root{
+    --ui-tinted-glass: linear-gradient( rgba(114, 30, 30, 0.4),rgba(15, 40, 128, 0.4));;
+    --ui-glass: linear-gradient(rgba(177, 177, 177, 0.326),rgba(85, 85, 85, 0.326));;
+    --ui-solidhead: linear-gradient(rgb(170, 15, 15),rgb(10, 44, 166));;
+    --ui-solidbody: linear-gradient(rgba(255, 255, 255, 0.9), rgba(185, 185, 185, 0.9));;
+    --ui-radius: 4px;
+    --ui-shadow-glass: 0px 0px 5px black, inset 0px 0px 5px white;
+
+}
+
+*{
+    box-sizing: border-box;
+}
+
+table{
+    background-image: url("../media/map.jpg");
+    width: 400px; height: 343px;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+img{
+    display: block;
+    margin: auto;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: var(--ui-radius);
+}
+
+
+p{
+    margin-inline: 30px;
+
+}
+h1, h2, h3{
+    margin: 10px;
+}
+li{
+    list-style: symbols();
+}
+/*Navigation*/
+nav{
+    background: var(--ui-tinted-glass); 
+    height: 100px;
+    border-radius: 4px;
+    backdrop-filter: blur(6px);
+    box-shadow: var(--ui-shadow-glass);
+    position: fixed;
+    z-index: 1;
+
+}
+
+nav, nav > ul, details > ul{
+    display: flex;
+    
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    text-shadow: 0px 0px 20px black;
+    gap: 25px;
+    justify-content: space-between;
+    list-style: none;
+    align-items: center;
+    padding: 10px;
+
+    
+
+}
+
+ nav > ul > li > a, td > a, button > a{
+    text-decoration: none;
+    color: white;
+    text-shadow: 0px 0px 20px black;
+    padding: 5px;
+    transition: all 0.4s;
+   
+}
+ nav > ul > li > a:hover, td > a:hover, button > a:hover{
+    text-shadow: 0px 0px 5px white;
+}
+
+details, summary{
+    display: none;
+}
+
+button{
+    border-radius: var(--ui-radius);
+    background: linear-gradient(rgb(134, 205, 248), rgb(3, 55, 119), rgb(6, 131, 209));
+    transition: all 0.4s;
+    
+}
+
+button:hover{
+    background: linear-gradient(rgb(134, 205, 248), rgb(3, 55, 119), rgb(0, 157, 255));
+}
+
+button, input {
+
+    border-radius: 7px;
+    border-width: 1px;
+    padding: 10px;
+    box-shadow: var(--ui-shadow-glass);
+    border-radius: var(--ui-radius);
+}
+
+input:hover {
+    box-shadow: 0px 0px 50px white, inset 0px 0px 30px white;
+    transition: width 400ms, height 470ms, background-color 550ms, box-shadow 450ms;
+    transition-timing-function: cubic-bezier(.16, .48, .74, .91);
+    transition-timing-function: ease-in-out;
+}
+
+input:focus {
+    background-color: rgb(192, 192, 192);
+    box-shadow: 0px 0px 50px white, inset 0px 0px 30px white;
+}
+
+label {
+    font-size: 17px;
+    margin-left: 6px;
+    opacity: 90%;
+}
+.highlight {
+    background-color: #fdf1ec;
+    border-left: 6px solid #ffb6b9;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+/*CLASSES*/
+
+.header{
+    background: var(--ui-solidhead);
+    border-radius: var(--ui-radius);
+    padding: 10px;
+}
+
+.submit {
+    width: auto;
+    height: 34px;
+    opacity: 60%;
+    cursor: pointer;
+}
+
+.center{
+    text-align: center;
+}
+
+.homeimg{
+    background-image: url('../media/Seoul_Night_Lights.jpg');
+    justify-content: center;
+    padding: 10px;
+    min-height: 600px;
+    height: auto;
+    background-position: center;
+    align-content: center;
+    
+
+}
+
+.homeimg > p, h1, h2, h3{
+    text-shadow: 0px 0px 10px rgb(0, 0, 0);
+}
+
+.logo{
+    max-width: 100%;
+    width: 120px;
+    height: auto;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+.logo:hover{
+    filter: drop-shadow(0 0px 20px white);
+}
+
+
+.dark{
+    color: white;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 450px);
+    grid-template-rows: repeat(auto-fit, auto-fit);
+    justify-content: center;
+    gap: 20px;
+}
+
+.card{
+    margin: 20px;
+    background: var(--ui-glass);
+    padding: 10px;
+    backdrop-filter: blur(6px);
+    box-shadow: var(--ui-shadow-glass) ;
+    border-radius: var(--ui-radius);
+    
+    
+}
+.card > img{
+    object-fit: cover;
+    width: 300px;
+    height: 250px;
+}
+
+.card > table{
+    background-size: contain;
+}
+.xs{
+    height: 160px;
+    max-width: 160px;
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+.vert{
+    flex-direction: column;
+
+}
+/*IDs*/
+
+#vert{
+    flex-direction: column;
+}
+
+#img2{
+    background-image: url("../media/skr_itaewon.jpg");
+}
+#img3{
+    background-image: url("../media/ppy.jpg");
+}
+
+#img4{
+    background: url("../media/incheon.jpg");
+}
+
+#img5{
+    background-image: url("../media/koreancuisine.jpg");
+}
+
+#opaqueh{
+    background: var(--ui-solidhead);
+}
+#opaqueb{
+    background: var(--ui-solidbody);
+}
+
+/*MOBILE!!!!!!!!!!!*/
+@media (max-width:674px) {
+    
+    p{
+    margin-inline: 40px;
+    }
+    nav > ul{
+        display: none;
+    }
+    summary{
+        list-style-type: none;
+        font-size: 2rem;
+    }
+
+
+    details, summary{
+        display: block;
+        border-radius: var(--ui-radius);    
+        background: var(--ui-tinted-glass);
+  
+        box-shadow: 0px 0px 5px black, inset 0px 0px 5px white;
+
+    }
+
+    details[open]{
+        position: absolute;
+        top: 30px;
+        right: 10px;
+
+        
+    
+    }
+       
+    
+    .homeimg{
+    padding: 10px;
+    min-height: 800px;
+    height: auto;
+    background-position: center;
+    align-content:center;
+
+    }
+
+
+    
+
+    details > ul > li > a{
+    text-decoration: none;
+    color: white;
+    }
+    
+
+    .card{
+        flex-direction: column;
+    }
+    .card > img{
+        height: 250px;
+        max-width: 250px;
+        object-fit: cover;
+    }
+
+@media (max-width:400px) {
+    table{
+        width: 285px;
+        height: 245px;
+    }
+    .grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 320px);
+    grid-template-rows: repeat(auto-fit, auto-fit);
+    justify-content: center;
+    gap: 40px;
+    
+}
+
+}
+
+}
