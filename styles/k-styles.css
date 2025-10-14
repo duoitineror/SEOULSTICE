@@ -198,14 +198,14 @@ label {
     backdrop-filter: blur(6px);
     box-shadow: var(--ui-shadow-glass) ;
     border-radius: var(--ui-radius);
-    align-content: center;
+    
     
     
 }
 .card > img{
     object-fit: cover;
     align-self: center;
-    width: 250px;
+    width: 200px;
     height: 250px;
 }
 
@@ -219,7 +219,7 @@ label {
 .flex{
     display: flex;
     justify-content: center;
-    
+
 }
 
 
