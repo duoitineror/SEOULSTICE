@@ -22,7 +22,7 @@ table{
 }
 
 body{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, sans-serif;
 
 }
 
@@ -33,6 +33,7 @@ img{
     max-width: 400px;
     height: auto;
     border-radius: var(--ui-radius);
+    filter: drop-shadow(0px 2px 3px black);
 }
 
 
@@ -42,6 +43,10 @@ p{
 }
 h1, h2, h3{
     margin: 10px;
+}
+
+.homeimg > p, h1, h2, h3, h4{
+    text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.593);
 }
 li{
     list-style: symbols();
@@ -161,8 +166,8 @@ label {
     min-height: 600px;
     height: auto;
     background-position: center;
+    background-size: cover;
     align-content: center;
-
 }
 
 
@@ -173,11 +178,6 @@ label {
     cursor: pointer;
     transition: all 1s;
 }
-
-.logo:hover{
-    filter: drop-shadow(0 0px 10px white);
-}
-
 
 .dark{
     color: white;
@@ -205,8 +205,8 @@ label {
 .card > img{
     object-fit: cover;
     align-self: center;
-    width: 200px;
-    height: 250px;
+    width: 250px;
+    height: 200px;
 }
 
 .card > table{
@@ -233,6 +233,8 @@ label {
     flex-direction: column;
 }
 
+
+
 #img2{
     background-image: url("../media/skr_itaewon.jpg");
 }
@@ -250,6 +252,14 @@ label {
 #img6{
     background-image: url("../media/jeju5.png");
 }
+
+#img7{
+    background-image: url("../media/busan.jpg");
+}
+
+#img8{
+    background-image: linear-gradient(rgb(158, 191, 215),rgb(255, 255, 255),rgb(227, 221, 223));
+}
 #opaqueh{
     background: var(--ui-solidhead);
 }
@@ -258,7 +268,7 @@ label {
 }
 
 /*MOBILE!!!!!!!!!!!*/
-@media (max-width:674px) {
+@media (max-width:700px) {
     
     p{
     margin-inline: 40px;
