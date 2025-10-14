@@ -162,21 +162,20 @@ label {
     height: auto;
     background-position: center;
     align-content: center;
-    
 
 }
 
 
 .logo{
     max-width: 100%;
-    width: 120px;
+    width: 110px;
     height: auto;
     cursor: pointer;
     transition: all 1s;
 }
 
 .logo:hover{
-    filter: drop-shadow(0 0px 20px white);
+    filter: drop-shadow(0 0px 10px white);
 }
 
 
@@ -186,7 +185,7 @@ label {
 
 .grid{
     display: grid;
-    grid-template-columns: repeat(auto-fit, 450px);
+    grid-template-columns: repeat(auto-fit, 470px);
     grid-template-rows: repeat(auto-fit, auto-fit);
     justify-content: center;
     gap: 20px;
@@ -195,16 +194,18 @@ label {
 .card{
     margin: 20px;
     background: var(--ui-glass);
-    padding: 10px;
+    padding: 20px;
     backdrop-filter: blur(6px);
     box-shadow: var(--ui-shadow-glass) ;
     border-radius: var(--ui-radius);
+    align-content: center;
     
     
 }
 .card > img{
     object-fit: cover;
-    width: 300px;
+    align-self: center;
+    width: 250px;
     height: 250px;
 }
 
@@ -212,8 +213,8 @@ label {
     background-size: contain;
 }
 .xs{
-    height: 160px;
-    max-width: 160px;
+    height: 250px;
+    width: 250px;
 }
 .flex{
     display: flex;
@@ -310,6 +311,7 @@ label {
 
     .card{
         flex-direction: column;
+        object-fit: cover;
     }
     .card > img{
         height: 250px;
@@ -328,8 +330,11 @@ label {
     grid-template-rows: repeat(auto-fit, auto-fit);
     justify-content: center;
     gap: 40px;
-    
-}
+    }
+
+    .card{
+        margin: 10px;
+    }
 
 }
 
