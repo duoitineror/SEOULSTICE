@@ -93,7 +93,7 @@ nav, nav > ul, details > ul{
     text-shadow: 0px 0px 5px white;
 }
 
-nav, summary{
+details, summary{
     display: none;
 }
 
