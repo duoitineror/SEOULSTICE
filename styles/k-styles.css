@@ -23,7 +23,7 @@ table{
 
 
 body{
-    font-family: 'Segoe UI', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, sans-serif;
+    font-family: 'Noto Sans';
 
 }
 
@@ -81,7 +81,7 @@ nav, nav > ul, details > ul{
 
 }
 
- nav > ul > li > a, td > a, button > a{
+nav > ul > li > a, td > a, button > a{
     text-decoration: none;
     color: white;
     text-shadow: 0px 0px 20px black;
@@ -89,7 +89,8 @@ nav, nav > ul, details > ul{
     transition: all 0.4s;
    
 }
- nav > ul > li > a:hover, td > a:hover, button > a:hover{
+
+nav > ul > li > a:hover, td > a:hover, button > a:hover{
     text-shadow: 0px 0px 5px white;
 }
 
@@ -219,6 +220,7 @@ label {
 }
 .flex{
     display: flex;
+    gap: 15px;
     justify-content: center;
 
 }
