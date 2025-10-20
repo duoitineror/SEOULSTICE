@@ -45,9 +45,13 @@ h1, h2, h3{
     margin: 10px;
 }
 
-.homeimg > p, h1, h2, h3, h4{
+.homeimg > h1, .homeimg > h2, .homeimg > h3, .homeimg > p{
     text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.593);
+    backdrop-filter: blur(3px);
+
 }
+
+
 li{
     list-style: symbols();
 }
@@ -151,7 +155,6 @@ label {
 
 .submit {
     width: auto;
-    height: 34px;
     opacity: 60%;
     cursor: pointer;
 }
@@ -198,6 +201,7 @@ label {
     grid-template-columns: repeat(auto-fit, 240px);
     grid-template-rows: repeat(auto-fit, auto-fit);
     gap: 20px;
+    justify-content: center;
 }
 
 .card{
@@ -254,6 +258,14 @@ label {
     width: 200px;
 }
 
+#dim{
+    background:rgba(0, 0, 0, 0.355);
+    padding: 8px;
+    backdrop-filter: blur(6px);
+}
+#adaptive{
+    width: auto;
+}
 #img2{
     background-image: url("../media/skr_itaewon.jpg");
 }
@@ -291,7 +303,7 @@ label {
 }
 
 /*MOBILE!!!!!!!!!!!*/
-@media (max-width:700px) {
+@media (max-width:989px) {
     
     p{
     margin-inline: 40px;
@@ -350,7 +362,7 @@ label {
 
     }
 
-@media (max-width:400px) {
+@media (max-width:457px) {
     table{
         width: 285px;
         height: 245px;
