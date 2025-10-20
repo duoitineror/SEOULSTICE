@@ -30,15 +30,15 @@ body{
 img{
     display: block;
     margin: auto;
-    width: 100%;
+    max-width: 400px;
     height: 200px;
     border-radius: var(--ui-radius);
     filter: drop-shadow(0px 2px 3px black);
 }
 
 
-p{
-    margin-inline: 30px;
+.homeimg > p{
+    margin-inline: 70px;
 
 }
 h1, h2, h3{
@@ -47,7 +47,6 @@ h1, h2, h3{
 
 .homeimg > h1, .homeimg > h2, .homeimg > h3, .homeimg > p{
     text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.593);
-    backdrop-filter: blur(3px);
 
 }
 
@@ -60,7 +59,7 @@ nav{
     background: var(--ui-tinted-glass); 
     height: 100px;
     border-radius: 4px;
-    backdrop-filter: blur(6px);
+    backdrop-filter: blur(3px);
     box-shadow: var(--ui-shadow-glass);
     position: fixed;
     z-index: 1;
@@ -102,25 +101,29 @@ details, summary{
 }
 
 button{
-    border-radius: var(--ui-radius);
     background: linear-gradient(rgb(134, 205, 248), rgb(3, 55, 119), rgb(6, 131, 209));
     transition: all 0.4s;
+    width: 240px;
+    margin: 5px;
     
 }
 
 button:hover{
     background: linear-gradient(rgb(134, 205, 248), rgb(3, 55, 119), rgb(0, 157, 255));
+    box-shadow: 0px 0px 20px rgb(3, 55, 119);
 }
 
 button, input {
-
-    border-radius: 7px;
+    
     border-width: 1px;
     padding: 10px;
     box-shadow: var(--ui-shadow-glass);
     border-radius: var(--ui-radius);
 }
 
+input{
+    width: 320px;
+}
 input:hover {
     box-shadow: 0px 0px 50px white, inset 0px 0px 30px white;
     transition: width 400ms, height 470ms, background-color 550ms, box-shadow 450ms;
@@ -155,7 +158,6 @@ label {
 
 .submit {
     width: auto;
-    opacity: 60%;
     cursor: pointer;
 }
 
@@ -190,7 +192,7 @@ label {
 
 .grid{
     display: grid;
-    grid-template-columns: repeat(auto-fit, 470px);
+    grid-template-columns: repeat(auto-fit, 450px);
     grid-template-rows: repeat(auto-fit, auto-fit);
     justify-content: center;
     gap: 20px;
@@ -198,41 +200,46 @@ label {
 
 .asidegrid{
     display: grid;
-    grid-template-columns: repeat(auto-fit, 240px);
+    grid-template-columns: repeat(auto-fit, 300px);
     grid-template-rows: repeat(auto-fit, auto-fit);
     gap: 20px;
     justify-content: center;
 }
 
+
 .card{
     margin: 10px;
     background: var(--ui-glass);
     padding: 8px;
-    backdrop-filter: blur(6px);
+    
     box-shadow: var(--ui-shadow-glass) ;
     border-radius: var(--ui-radius);
     
     
     
 }
-.card > img{
+
+.card.flex > img, .card > img{
     object-fit: cover;
-    flex-shrink: 2;
     align-self: center;
+}
+
+.card.flex > img{
     max-width: 250px;
-    height: 200px;
+    
 }
 
 .card > table{
     background-size: contain;
+    margin: auto;
 }
 .xs{
-    height: 250px;
-    width: 250px;
+    height: 160px;
+    width: 160px;
 }
 .flex{
     display: flex;
-    gap: 15px;
+    gap: 10px;
     justify-content: center;
 
 }
@@ -259,9 +266,11 @@ label {
 }
 
 #dim{
-    background:rgba(0, 0, 0, 0.355);
+    box-shadow: 0px 0px 5px black;
     padding: 8px;
-    backdrop-filter: blur(6px);
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: brightness(50%);
+    padding-block: 20px;
 }
 #adaptive{
     width: auto;
@@ -301,6 +310,12 @@ label {
 #opaqueb{
     background: var(--ui-solidbody);
 }
+
+#bgcardfx{
+    backdrop-filter: blur(3px);
+}
+
+
 
 /*MOBILE!!!!!!!!!!!*/
 @media (max-width:989px) {
@@ -356,11 +371,7 @@ label {
     .flex{
         flex-direction: column;
     }
-    .card > img{
-        height: 250px;
-        max-width: 250px;
-
-    }
+  
 
 @media (max-width:457px) {
     table{
