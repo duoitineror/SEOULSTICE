@@ -103,7 +103,7 @@ details, summary{
 button{
     background: linear-gradient(rgb(134, 205, 248), rgb(3, 55, 119), rgb(6, 131, 209));
     transition: all 0.4s;
-    width: 240px;
+    width: auto;
     margin: 5px;
     
 }
@@ -215,10 +215,11 @@ label {
     box-shadow: var(--ui-shadow-glass) ;
     border-radius: var(--ui-radius);
     
-    
-    
 }
 
+.tinted{
+    background: var(--ui-tinted-glass);
+}
 .card.flex > img, .card > img{
     object-fit: cover;
     align-self: center;
@@ -320,7 +321,11 @@ label {
     backdrop-filter: blur(3px);
 }
 
-
+.scroll{
+    overflow: auto;
+  white-space: nowrap;
+  display: flex;
+}
 
 /*MOBILE!!!!!!!!!!!*/
 @media (max-width:989px) {
@@ -379,6 +384,10 @@ label {
   
 
 @media (max-width:457px) {
+
+    p{
+        margin-inline: 30px;
+    }
     table{
         width: 285px;
         height: 245px;
